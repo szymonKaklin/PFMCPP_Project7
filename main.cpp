@@ -7,6 +7,8 @@ Project 7: Part 1/1
 
 Create a branch named Part1
 
+Purpose:  This project will teach you how to read existing code someone else has already written, and to get it working again.  Consider this project the "midterm" of the course.
+
  Inheritance and Composition
  
 Build/Run often with this task to make sure you're not breaking the code with each step.
@@ -38,10 +40,17 @@ it's very easy to mess this task up.
  7) create a new Item-derived type that boosts the attack damage called AttackItem 
         add an instance of it to the DragonSlayer class
         make the DragonSlayer::attack use it when the dragonSlayer attacks a dragon. 
+        
+ 8) Clear the warnings as best you can.   
+         for the 'vtables' warnings coming from a header file, move any virtual function implementations to the complementary cpp file.
+         for 'shadow' warnings, rename the offending variable.
+         casting is introduced in the next video and project, so ignore any 'implicit conversion' warnings.
 
  Commit your changes by clicking on the Source Control panel on the left, entering a message, and click [Commit and push].
- 
- Send me the the link to your repl.it in a DM on Slack
+
+Make a pull request after you make your first commit and pin the pull request link to our DM thread.
+
+send me a DM to check your pull request
 
  Wait for my code review.
 

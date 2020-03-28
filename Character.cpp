@@ -94,7 +94,7 @@ void Character::attackInternal(Character& other)
     {
         /*
         When you defeat another Character: 
-            a) your stats are restored to their initial value
+            a) your stats are restored to their initial value if they are lower than it.
             b) your stats are boosted 10%
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
