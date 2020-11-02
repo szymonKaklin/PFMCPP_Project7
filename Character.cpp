@@ -87,7 +87,7 @@ int Character::takeDamage(int damage)
 }
 
 
-#include <assert>
+#include <assert.h>
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )

@@ -1,6 +1,5 @@
 #include "HelpfulItem.h"
 
-void HelpfulItem::use(Character *character)
-{
-    
-}
+HelpfulItem::HelpfulItem() : Item("helpful item", 2) { }
+
+void HelpfulItem::use(Character *character) { }

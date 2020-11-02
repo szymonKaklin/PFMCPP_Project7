@@ -1,8 +1,9 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
 #include "Utility.h"
+#include <assert.h>
 
-DragonSlayer::DragonSlayer(std::string name, int hp, int armor) : Character(hp, armor, 4) { }
+DragonSlayer::DragonSlayer(std::string name_, int hp, int armor) : Character(hp, armor, 4), name(name_) { }
 
 const std::string& DragonSlayer::getName()
 {
