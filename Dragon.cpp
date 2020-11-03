@@ -10,6 +10,7 @@ void Dragon::attack(Character &other)
     if( auto* slayer = dynamic_cast<DragonSlayer*>(&other) )
     {
         //dragons can't attack dragon slayers
+        std::cout << "Dragon's can't attak dragon Slayers!" << std::endl;
         slayer->defend();
     }
     else

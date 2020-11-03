@@ -3,7 +3,11 @@
 #include "Utility.h"
 #include <assert.h>
 
-DragonSlayer::DragonSlayer(std::string name_, int hp, int armor) : Character(hp, armor, 4), name(name_) { }
+DragonSlayer::DragonSlayer(std::string name_, int hp, int armor) : Character(hp, armor, 4), name(name_) 
+{
+    helpfulItems = makeHelpfulItems();
+    defensiveItems = makeDefensiveItems();
+}
 
 const std::string& DragonSlayer::getName()
 {

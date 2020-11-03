@@ -4,9 +4,13 @@
 #include "DefensiveItem.h"
 #include "Character.h"
 #include <assert.h>
+#include <stdlib.h>
+#include <time.h>
 
-std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
+std::vector<std::unique_ptr<Item>> makeHelpfulItems()
 {
+    int num = 1 + (rand() % 3);
+    
     std::vector<std::unique_ptr<Item>> items;
     
     while( num-- >= 0 )
@@ -18,8 +22,10 @@ std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
     return items;
 }
 
-std::vector<std::unique_ptr<Item>> makeDefensiveItems(int num)
+std::vector<std::unique_ptr<Item>> makeDefensiveItems()
 {
+    int num = 1 + (rand() % 3);
+
     std::vector<std::unique_ptr<Item>> items;
     
     while( num-- >= 0 )
