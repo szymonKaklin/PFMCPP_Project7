@@ -9,6 +9,8 @@ std::vector<std::unique_ptr<Item>> makeHelpfulItems();
 
 std::vector<std::unique_ptr<Item>> makeDefensiveItems();
 
+std::vector<std::unique_ptr<Item>> makeAttackItems(int num);
+
 struct Character;
 std::string getCharacterStats(Character* ch);
 
