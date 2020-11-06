@@ -1,22 +1,15 @@
 #include "Utility.h"
-
 #include "HelpfulItem.h"
 #include "DefensiveItem.h"
-#include "AttackItem.h"
-#include "Character.h"
-#include "Paladin.h"
-#include "DragonSlayer.h"
-#include "Dragon.h"
-#include "Dwarf.h"
 
-#include <assert.h>
-#include <stdlib.h>
-#include <time.h>
-
-std::vector<std::unique_ptr<Item>> makeHelpfulItems()
+int generateRandomInt()
 {
-    int num = 1 + (rand() % 2);
-    
+    int r = 1 + (rand() % 2);
+    return r;
+}
+
+std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
+{   
     std::vector<std::unique_ptr<Item>> items;
     
     while( num-- >= 0 )
@@ -28,10 +21,8 @@ std::vector<std::unique_ptr<Item>> makeHelpfulItems()
     return items;
 }
 
-std::vector<std::unique_ptr<Item>> makeDefensiveItems()
+std::vector<std::unique_ptr<Item>> makeDefensiveItems(int num)
 {
-    int num = 1 + (rand() % 3);
-
     std::vector<std::unique_ptr<Item>> items;
     
     while( num-- >= 0 )
@@ -43,19 +34,6 @@ std::vector<std::unique_ptr<Item>> makeDefensiveItems()
     return items;
 }
 
-std::vector<std::unique_ptr<Item>> makeAttackItems(int num)
-{
-    std::vector<std::unique_ptr<Item>> items;
-    
-    while( num-- >= 0 )
-    {
-        items.push_back( std::unique_ptr<AttackItem>(new AttackItem()) );
-    }
-    
-    std::cout << "made " << items.size() << " attack items" << std::endl;
-    return items;
-}
-
 std::string getCharacterStats(Character* ch)
 {
     std::string str;
@@ -64,7 +42,7 @@ std::string getCharacterStats(Character* ch)
     str += "    armor: " + std::to_string(ch->getArmorLevel()) + "\n";
     str += "    attack damage: " + std::to_string(ch->getAttackDamage()) + "\n";
     str += "    is defending: " + std::string((ch->getIsDefending() ? "true" : "false" )) + "\n";
-    str += "    " + std::to_string(ch->getHelpfulItems().size()) + " helpful items,  " + std::to_string(ch->getDefensiveItems().size()) + " defensive items, " + std::to_string(ch->getAttackItems().size()) + " attack items";
+    str += "    " + std::to_string(ch->getHelpfulItems().size()) + " helpful items,  " + std::to_string(ch->getDefensiveItems().size()) + " defensive items";
     return str;
 }
 

@@ -1,6 +1,5 @@
 #include "DefensiveItem.h"
 #include "Utility.h"
-#include <assert.h>
 
 DefensiveItem::DefensiveItem() : Item("defensive item", 3) { }
 
